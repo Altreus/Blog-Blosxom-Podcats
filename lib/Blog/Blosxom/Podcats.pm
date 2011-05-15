@@ -1,5 +1,7 @@
 package Blog::Blosxom::Podcats;
 
+use strict;
+
 use base qw/Blog::Blosxom/;
 
 use Syntax::Highlight::Engine::Kate::Haskell;
