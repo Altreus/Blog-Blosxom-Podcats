@@ -1,6 +1,7 @@
 package Blog::Blosxom::Podcats;
 
 use strict;
+use warnings;
 
 use base qw/Blog::Blosxom/;
 
@@ -296,7 +297,7 @@ sub sort {
 sub foot_data {
     my $self = shift;
     
-    open my $fh, "<", "../docs/feeds.yml";
+    open my $fh, "<", "../docs/feeds.yml" or return {};
     my $data = Load do{ local $/; <$fh>; };
     close $fh;
 
